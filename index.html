@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stephen Opara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="id">Solve That Simultaneous Equation.</h1>
+  <div id="equ">
+    
+ 
+  <div >
+    <input type="number" name="ff" placeholder="a" required>&nbsp;X
+    
+    +
+    
+    <input type="number" name="fff" placeholder="b"  id="" required>&nbsp;Y
+    =
+    
+    <input type="number"  placeholder="z" name="eqq" required>
+  </div>
+ 
+ 
+ <div >
+      <input type="number" name="ss" placeholder="c" required>&nbsp;X
+    
+    +
+    
+    <input type="number" name="sss" placeholder="d" required>&nbsp;Y
+   =
+    
+    <input type="number" placeholder="k" name="eqqq" required>
+    
+    </div>
+  </div>
+  <br>
+  <div>
+    <button type="submit" onclick="solve()">Solve</button>
+  </div>
+  <br>
+  <br>
+  
+  <div id="ans"></div>
+  
+  <div id="direction">
+  <h3>Substitution Method.</h3>
+  <span id="ex1"></span><br>
+  <span id="ex2"></span><br>
+  Making Y subject from equation 1.<br>
+  Y= <a href="" id="ex3"></a>&nbsp;(3)<br>
+  <span id="und"></span><br>
+  Substituting equation 3 into equation 2.<br><br>
+  <span id="ex4"></span><span id="ex5"></span><br>
+  <span id="ex6"></span><br>
+  Simplifying we obtain.<br><br>
+  <span id="ex7"></span><br><br>
+  Making X subject by slightly rearranging the terms.<br><br>
+  <span id="ex8"></span><br>
+  <span id="ex9"></span><br><br>
+  Therefore <span id="ex10"></span><br><br>
+Substituting the value of X into equation (3).<br><br>
+<span id="ex11"></span><br><br>
+<span id="ex12"></span>
+  </div>
+  
+  </body>
+  
+  <script type="text/javascript">
+    
+    function solve(){
+      const a = document.getElementsByName("ff")[0].value;
+      
+      const b = document.getElementsByName("fff")[0].value;
+      
+      const c = document.getElementsByName("ss")[0].value;
+      
+      const d = document.getElementsByName("sss")[0].value;
+      
+      const z = document.getElementsByName("eqq")[0].value;
+      
+      const k = document.getElementsByName("eqqq")[0].value;
+    
+    const y = (k-((c*z)/a))/(d-((b*c)/a));
+    const x= (z-(b*y))/a;
+    
+    
+    document.getElementById("ans").innerHTML= 'Y'+'='+y+','+' '+'X'+'='+x;
+   
+    document.getElementById("ex1").innerHTML= a+'X'+'+'+b+'Y'+'='+z+' '+'(1)';
+    document.getElementById("ex2").innerHTML= c+'X'+'+'+d+'Y'+'='+k+' '+'(2)';
+    document.getElementById("ex3").innerHTML=z+'-'+a+'X';
+    document.getElementById("und").innerHTML=b;
+    document.getElementById("ex4").innerHTML= c+'X'+'+'+d;
+    document.getElementById("ex5").innerHTML= '('+z+'-'+a+'X'+')'+'='+' '+k;
+    document.getElementById("ex6").innerHTML='&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+b+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp';
+    document.getElementById("ex7").innerHTML= c*b+'X'+'+'+d*z+'-'+d*a+'X'+'='+k*b;
+    
+    document.getElementById("ex8").innerHTML= 'X'+'='+k*b+'-'+d*z;
+    document.getElementById("ex9").innerHTML= b*c+'-'+d*a;
+    document.getElementById("ex10").innerHTML= 'X'+'='+(k*b-d*z)/(b*c-d*a);
+    const X = (k*b-d*z)/(b*c-d*a);
+    document.getElementById("ex11").innerHTML= 'Y'+'='+'('+z+'-'+a*X+')'+'/'+b ;
+    const Y=(z-a*X)/b;
+    document.getElementById("ex12").innerHTML='Y'+'='+Y;
+    document.getElementById("direction").style.display="block";
+   if((isNaN(Y)) && isNaN(X) && a==""){
+     alert("input a number");
+     document.getElementById("direction").style.display="none";
+     document.getElementById("ans").innerHTML="Input a number.";
+   }
+     if (isNaN(X) && isNaN(Y) ){
+       document.getElementById("ans").innerHTML= 'Y'+'='+'undefined'+','+' '+'X'+'='+"Undefined";
+       document.getElementById("ex10").innerHTML= 'X=undefined';
+       document.getElementById("ex12").innerHTML='Y'+'='+'undefined';
+     }
+       
+     }
+   
+  </script>
+
+</html>

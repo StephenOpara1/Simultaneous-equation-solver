@@ -1,0 +1,92 @@
+input{
+  border: 1px solid cyan;
+  padding: 1px;
+  font-size: 20px;
+  outline: none;
+  background-color: black;
+  color: cyan;
+  width: 25px;
+  text-align: center;
+  margin-bottom: 2px;
+  border-radius: 6px;
+}
+input::placeholder {
+  color: cyan;
+  
+}
+
+body{
+  background: black;
+  color: cyan;
+}
+
+#ans{
+  border: 1px solid cyan;
+  padding: 4px;
+  margin: 5px;
+  border-radius: 7px;
+  font-style: italic;
+}
+
+button{
+  padding: 5px;
+  border: 1px solid cyan;
+  color: cyan;
+  background: black;
+  border-radius: 2px;
+  left: 15px;
+  position: relative;
+}
+
+#equ{
+  position: relative;
+  margin: 15px;
+}
+
+#fra{
+  
+  height: 1px;
+  background: cyan;
+  bottom: 373px;
+  position: relative;
+  width: 56px;
+  left: 165px;
+}
+
+#direction{
+  height: 600px;
+  border: 1px solid cyan;
+  margin: 6px;
+  position: relative;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
+
+
+ 
+
+span{
+  color: cyan;
+}
+a{
+  color: cyan;
+}
+
+#ex6{
+  left: 10px;
+  border-top: 2px solid cyan;
+  position: relative;
+  width: 30px;
+}
+#ex9{
+  border-top: 2px solid cyan;
+  position: relative;
+  left: 10px;
+}
+
+.id{
+  padding: 5px;
+  font-size: 20px;
+}
