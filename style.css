@@ -11,13 +11,13 @@ input{
   border-radius: 6px;
 }
 input::placeholder {
-  color: red;
+  color: cyan;
   
 }
 
 body{
   background: black;
-  color: red;
+  color: cyan;
 }
 
 #ans{
